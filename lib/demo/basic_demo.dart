@@ -48,7 +48,17 @@ class ContainerDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      // color: Colors.white,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: NetworkImage(
+                  'http://b.hiphotos.baidu.com/image/h%3D300/sign=03ffa97602d79123ffe092749d355917/48540923dd54564e5b271d47bdde9c82d1584f0a.jpg'),
+              alignment: Alignment.topCenter,
+              // repeat: ImageRepeat.repeatY,
+              fit: BoxFit.cover,
+              colorFilter: ColorFilter.mode(
+                  Colors.indigoAccent[400].withOpacity(0.5),
+                  BlendMode.hardLight))),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
