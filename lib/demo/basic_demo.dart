@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class BasicDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return RichTextDemo();
+    return ContainerDemo();
   }
 }
 
@@ -40,6 +40,48 @@ class RichTextDemo extends StatelessWidget {
                 text: 'zhai',
                 style: TextStyle(fontSize: 28, color: Colors.blue))
           ]),
+    );
+  }
+}
+
+class ContainerDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.white,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Container(
+            child: Icon(Icons.pool, size: 32.0, color: Colors.white),
+            // color: Color.fromRGBO(32, 21, 88, 1.0),
+            padding: EdgeInsets.only(left: 8, right: 8, top: 12, bottom: 12),
+            margin: EdgeInsets.all(8.0),
+            width: 90.0,
+            height: 100.0,
+            decoration: BoxDecoration(
+                color: Color.fromRGBO(32, 21, 88, 1.0),
+                border: Border.all(color: Colors.red, width: 3.0),
+                // borderRadius: BorderRadius.circular(12.0)),
+                boxShadow: [
+                  BoxShadow(
+                      offset: Offset(6.0, 7.0),
+                      color: Color.fromRGBO(16, 20, 188, 1.0),
+                      blurRadius: 25.0,
+                      spreadRadius: -9.0)
+                ],
+                // gradient: RadialGradient(colors: [
+                //   Color.fromRGBO(7, 88, 7, 1.0),
+                //   Color.fromRGBO(88, 7, 88, 1.0)
+                // ]),
+                gradient: LinearGradient(colors: [
+                  Color.fromRGBO(7, 88, 7, 1.0),
+                  Color.fromRGBO(88, 7, 88, 1.0)
+                ]),
+                shape: BoxShape.circle), // 不能设置圆角
+          )
+        ],
+      ),
     );
   }
 }
