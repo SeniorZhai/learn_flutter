@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './post_show.dart';
 import '../model/post.dart';
 
 class ListViewDome extends StatelessWidget {
@@ -13,14 +14,17 @@ class ListViewDome extends StatelessWidget {
   Widget _listItemBuilder(BuildContext context, int index) {
     return Container(
         color: Colors.white,
-        margin: EdgeInsets.only(bottom:8.0),
+        margin: EdgeInsets.only(bottom: 8.0),
         child: Stack(
           children: <Widget>[
             Column(
               children: <Widget>[
                 AspectRatio(
                     aspectRatio: 16.0 / 9.0,
-                    child: Image.network(posts[index].imageUrl,fit: BoxFit.cover,)),
+                    child: Image.network(
+                      posts[index].imageUrl,
+                      fit: BoxFit.cover,
+                    )),
                 SizedBox(height: 16.0),
                 Text(
                   posts[index].title,
@@ -38,7 +42,8 @@ class ListViewDome extends StatelessWidget {
                   splashColor: Colors.white.withOpacity(0.3),
                   highlightColor: Colors.white.withOpacity(0.5),
                   onTap: () {
-                    debugPrint('Tap');
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (contxt) => PostShow(post: posts[index])));
                   },
                 ),
               ),
