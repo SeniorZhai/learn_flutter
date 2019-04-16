@@ -3,6 +3,7 @@ import './demo/drawer_demo.dart';
 import './demo/bottom_navagation_demo.dart';
 import './demo/list_demo.dart';
 import './demo/basic_demo.dart';
+import './demo/layout_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -50,11 +51,7 @@ class Home extends StatelessWidget {
               ),
             ),
             body: TabBarView(
-              children: <Widget>[
-                ListViewDome(),
-                BasicDemo(),
-                Icon(Icons.directions_bike, size: 128.0, color: Colors.black12)
-              ],
+              children: <Widget>[ListViewDome(), BasicDemo(), LayoutDemo()],
             ),
             drawer: DrawerDemo(),
             // endDrawer: 右边抽屉
