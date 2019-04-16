@@ -6,7 +6,12 @@ class SliverDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: <Widget>[
-        SliverGridDemo()
+        SliverSafeArea( // 显示在安全的可视范围 
+          sliver: SliverPadding(
+            padding: EdgeInsets.all(8.0),
+            sliver: SliverGridDemo(),
+          ),
+        )
       ],
     );
   }
