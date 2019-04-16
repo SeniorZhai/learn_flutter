@@ -23,6 +23,7 @@ class GridViewBuilderDemo extends StatelessWidget {
     return GridView.builder(
       itemCount: posts.length,
       itemBuilder: _itemBuilder,
+      // SliverGridDelegateWithMaxCrossAxisExtent 主轴控制
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           // 侧轴控制
           crossAxisCount: 3,
