@@ -10,6 +10,7 @@ class SliverDemo extends StatelessWidget {
           // title: Text("Sliver Title"),
           // pinned: true, // 固定在顶部
           floating: true,
+          automaticallyImplyLeading: false,
           expandedHeight: 178.0,
           flexibleSpace: FlexibleSpaceBar(
             title: Text(
@@ -17,6 +18,7 @@ class SliverDemo extends StatelessWidget {
               style: TextStyle(
                   fontSize: 15.0,
                   letterSpacing: 3.0,
+                  color: Colors.white,
                   fontWeight: FontWeight.w400),
             ),
             background: Image.network(
