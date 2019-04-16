@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SliverDemo(),
+      home: Home(),
       theme: ThemeData(
           primarySwatch: Colors.yellow,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.13),
@@ -58,7 +58,7 @@ class Home extends StatelessWidget {
                 ListViewDome(),
                 BasicDemo(),
                 LayoutDemo(),
-                ViewDemo()
+                SliverDemo()
               ],
             ),
             drawer: DrawerDemo(),
