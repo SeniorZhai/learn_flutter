@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import '../model/post.dart';
 
 class ViewDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GridViewDemo();
+  }
+}
+
+class GridViewDemo extends StatelessWidget {
   List<Widget> _builderTiles(int length) {
     return List.generate(length, (int index) {
       return Container(
@@ -18,9 +25,8 @@ class ViewDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-        scrollDirection: Axis.horizontal,
-        crossAxisCount: 3,
+    return GridView.extent(
+        maxCrossAxisExtent: 120.0,
         crossAxisSpacing: 16.0,
         mainAxisSpacing: 16.0,
         children: _builderTiles(100));
