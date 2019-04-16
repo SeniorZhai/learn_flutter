@@ -7,10 +7,10 @@ class LayoutDemo extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          AspectRatio(
-            aspectRatio: 16.0 / 9.0,
+          ConstrainedBox(
+            constraints: BoxConstraints(minHeight: 200.0, maxWidth: 100),
             child: Container(
-              color: Color.fromRGBO(102, 100, 20, 1.0),
+              color: Colors.blue,
             ),
           )
         ],
