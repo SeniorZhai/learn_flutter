@@ -4,16 +4,42 @@ class LayoutDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround, // 主轴 空间均分
-        crossAxisAlignment: CrossAxisAlignment.stretch, // 交叉轴 拉伸
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          IconBadge(Icons.pool),
-          IconBadge(
-            Icons.battery_alert,
-            size: 64,
+          SizedBox(
+            // 固定大小
+            width: 120,
+            height: 200,
+            child: Container(
+              alignment: Alignment(1.0, -1.0), // x y [-1~1] 子部件对齐位置
+              decoration: BoxDecoration(
+                  color: Color.fromRGBO(9, 7, 66, 1.0),
+                  borderRadius: BorderRadius.circular(8.0)),
+              child: Icon(
+                Icons.access_time,
+                color: Colors.white,
+                size: 32.0,
+              ),
+            ),
           ),
-          IconBadge(Icons.airline_seat_flat)
+          SizedBox(
+            height: 32,
+          ),
+          SizedBox(
+            width: 100,
+            height: 100,
+            child: Container(
+              decoration: BoxDecoration(
+                  color: Color.fromRGBO(9, 7, 66, 1.0),
+                  borderRadius: BorderRadius.circular(8.0)),
+              child: Icon(
+                Icons.access_time,
+                color: Colors.white,
+                size: 32.0,
+              ),
+            ),
+          )
         ],
       ),
     );
