@@ -18,6 +18,10 @@ class MaterialComponents extends StatelessWidget {
             title: 'FloatingActionButton',
             page: FloatingActionButtonDemo(),
           ),
+          ListItem(
+            title: 'RaisedButton',
+            page: RaisedDemo(),
+          ),
         ],
       ),
     );
@@ -47,6 +51,48 @@ class ButtonDemo extends StatelessWidget {
                   textColor: Theme.of(context).accentColor,
                 ),
                 FlatButton.icon(
+                  icon: Icon(Icons.add),
+                  label: Text('button'),
+                  onPressed: () {},
+                  splashColor: Colors.grey,
+                  textColor: Theme.of(context).accentColor,
+                )
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class RaisedDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('FloatingActionButtonDemo'),
+        elevation: 0.0,
+      ),
+      body: Container(
+        padding: EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                RaisedButton(
+                  child: Text('Button'),
+                  onPressed: () {},
+                  splashColor: Colors.grey,
+                  elevation: 0.0,
+                  textColor: Theme.of(context).accentColor,
+                ),
+                SizedBox(
+                  width: 12.0,
+                ),
+                RaisedButton.icon(
                   icon: Icon(Icons.add),
                   label: Text('button'),
                   onPressed: () {},
