@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './button_demo.dart';
 import './floatingbutton_demo.dart';
+import './popup_menu.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -19,6 +20,10 @@ class MaterialComponents extends StatelessWidget {
           ListItem(
             title: 'FloatingButton',
             page: FloatingActionButtonDemo(),
+          ),
+          ListItem(
+            title: 'PopupMenu',
+            page: PopupMenuDemo(),
           )
         ],
       ),
