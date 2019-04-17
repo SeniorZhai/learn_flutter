@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.yellow,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.13),
+          accentColor: Color.fromRGBO(20, 10, 200, 1.0),
           splashColor: Colors.white10),
     );
   }

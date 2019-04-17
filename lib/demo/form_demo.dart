@@ -11,7 +11,7 @@ class FormDemo extends StatelessWidget {
           padding: EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[TextFieldDemo()],
+            children: <Widget>[RegisterDemo()],
           ),
         ),
       ),
@@ -67,6 +67,76 @@ class _TextFieldDemoState extends State<TextFieldDemo> {
         debugPrint('submit $value');
       },
       cursorColor: Colors.red,
+    );
+  }
+}
+
+class RegisterDemo extends StatefulWidget {
+  @override
+  _RegisterDemoState createState() => _RegisterDemoState();
+}
+
+class _RegisterDemoState extends State<RegisterDemo> {
+  final registerFormKey = GlobalKey<FormState>();
+  String userName, password;
+
+  void submitRegister() {
+    registerFormKey.currentState.save();
+    registerFormKey.currentState.validate();
+    debugPrint('username:$userName');
+    debugPrint('password:$password');
+  }
+
+  String validateUserName(value) {
+    if (value.isEmpty) {
+      return 'Username is required';
+    }
+    return null;
+  }
+
+  String validatePassword(value) {
+    if (value.isEmpty) {
+      return 'Password is required';
+    }
+    return null;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: registerFormKey,
+      child: Column(
+        children: <Widget>[
+          TextFormField(
+              decoration:
+                  InputDecoration(labelText: 'UserName', helperText: ''),
+              onSaved: (value) => userName = value,
+              validator: validateUserName),
+          TextFormField(
+            obscureText: true,
+            decoration: InputDecoration(labelText: 'Password', helperText: ''),
+            onSaved: (value) => password = value,
+            validator: validatePassword,
+          ),
+          SizedBox(
+            height: 16.0,
+          ),
+          Container(
+            width: double.infinity,
+            child: RaisedButton(
+              color: Theme.of(context).accentColor,
+              child: Text(
+                'Register',
+                style: TextStyle(color: Colors.white),
+              ),
+              elevation: 0.0,
+              onPressed: () {
+                submitRegister();
+              },
+            ),
+          )
+        ],
+      ),
     );
   }
 }
