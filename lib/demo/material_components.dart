@@ -30,6 +30,10 @@ class MaterialComponents extends StatelessWidget {
             title: 'FixedButton',
             page: FixedButtonDemo(),
           ),
+          ListItem(
+            title: 'ButtonBar',
+            page: ButtonBarDemo(),
+          )
         ],
       ),
     );
@@ -215,6 +219,43 @@ class FixedButtonDemo extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class ButtonBarDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('FloatingActionButtonDemo'),
+          elevation: 0.0,
+        ),
+        body: Container(
+            padding: EdgeInsets.all(8.0),
+            child: Theme(
+              data: Theme.of(context).copyWith(
+                  buttonTheme: ButtonThemeData(padding: EdgeInsets.all(2.0))),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          ButtonBar(
+                            children: <Widget>[
+                              OutlineButton(
+                                  child: Text('button'), onPressed: () {}),
+                              OutlineButton(
+                                  child: Text('button'), onPressed: () {}),
+                              OutlineButton(
+                                  child: Text('button'), onPressed: () {}),
+                              OutlineButton(
+                                  child: Text('button'), onPressed: () {})
+                            ],
+                          )
+                        ])
+                  ]),
+            )));
   }
 }
 
