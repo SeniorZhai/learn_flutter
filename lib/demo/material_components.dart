@@ -87,7 +87,9 @@ class RaisedDemo extends StatelessWidget {
                   onPressed: () {},
                   splashColor: Colors.grey,
                   elevation: 0.0,
-                  textColor: Theme.of(context).accentColor,
+                  color: Theme.of(context).accentColor,
+                  textColor: Colors.white,
+                  shape: StadiumBorder(),
                 ),
                 SizedBox(
                   width: 12.0,
