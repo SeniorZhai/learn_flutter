@@ -8,6 +8,7 @@ import './switch_demo.dart';
 import './slider_demo.dart';
 import './date_time_demo.dart';
 import './simple_dialog_demo.dart';
+import './alert_dialog_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -54,6 +55,10 @@ class MaterialComponents extends StatelessWidget {
           ListItem(
             title: 'SimpleDialog',
             page: SimpleDialogDemo(),
+          ),
+          ListItem(
+            title: 'AlertDialog',
+            page: AlertDialogDemo(),
           )
         ],
       ),
