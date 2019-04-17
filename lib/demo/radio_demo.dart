@@ -23,6 +23,7 @@ class _RadioDemoState extends State<RadioDemo> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          Text('RadioGoupValue $_radioGroupA'),
           RadioListTile(
             value: 0,
             groupValue: _radioGroupA,

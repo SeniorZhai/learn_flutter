@@ -4,6 +4,7 @@ import './floatingbutton_demo.dart';
 import './popup_menu.dart';
 import './check_box_demo.dart';
 import './radio_demo.dart';
+import './switch_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -34,6 +35,10 @@ class MaterialComponents extends StatelessWidget {
           ListItem(
             title: 'Radio',
             page: RadioDemo(),
+          ),
+          ListItem(
+            title: 'Switch',
+            page: SwitchDemo(),
           )
         ],
       ),
