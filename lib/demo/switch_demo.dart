@@ -11,7 +11,7 @@ class _SwitchDemoState extends State<SwitchDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Radio'),
+        title: Text('Switch'),
         elevation: 0.0,
       ),
       body: Column(
