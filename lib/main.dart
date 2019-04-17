@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
-        '/form':(context)=> FormDemo()
+        '/form': (context) => FormDemo()
       },
       theme: ThemeData(
           primarySwatch: Colors.yellow,
