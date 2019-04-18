@@ -12,6 +12,7 @@ import './alert_dialog_demo.dart';
 import './bottom_sheet_demo.dart';
 import './snack_bar_demo.dart';
 import './expansion_panel_demo.dart';
+import './clip_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -74,6 +75,10 @@ class MaterialComponents extends StatelessWidget {
           ListItem(
             title: 'ExpnsionPanel',
             page: ExpansionPanelDemo(),
+          ),
+          ListItem(
+            title: 'Clip',
+            page: ClipDemo(),
           )
         ],
       ),
