@@ -10,6 +10,7 @@ import './date_time_demo.dart';
 import './simple_dialog_demo.dart';
 import './alert_dialog_demo.dart';
 import './bottom_sheet_demo.dart';
+import './snack_bar_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -64,6 +65,10 @@ class MaterialComponents extends StatelessWidget {
           ListItem(
             title: 'BottomSheet',
             page: BottomSheetDemo(),
+          ),
+          ListItem(
+            title: 'Snackbar',
+            page: SnackBarDemo(),
           )
         ],
       ),
