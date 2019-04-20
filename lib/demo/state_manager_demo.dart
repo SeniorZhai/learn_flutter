@@ -21,7 +21,7 @@ class _StateManagerDemoState extends State<StateManagerDemo> {
         title: Text('SateManager'),
         elevation: 0.0,
       ),
-      body: Counter(_count, _increaseCount),
+      body: CounterWrapper(_count, _increaseCount),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
@@ -35,19 +35,28 @@ class _StateManagerDemoState extends State<StateManagerDemo> {
   }
 }
 
-class Counter extends StatelessWidget {
+class CounterWrapper extends StatelessWidget {
   final int count;
   final VoidCallback increaseCount;
-
-  Counter(this.count, this.increaseCount);
+  CounterWrapper(this.count, this.increaseCount);
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: ActionChip(
-        label: Text('$count'),
-        onPressed: increaseCount,
-      ),
+      child: Counter(count, increaseCount),
+    );
+  }
+}
+
+class Counter extends StatelessWidget {
+  final int count;
+  final VoidCallback increaseCount;
+  Counter(this.count, this.increaseCount);
+  @override
+  Widget build(BuildContext context) {
+    return ActionChip(
+      label: Text('$count'),
+      onPressed: increaseCount,
     );
   }
 }
