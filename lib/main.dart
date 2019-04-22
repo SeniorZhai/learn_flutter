@@ -12,6 +12,7 @@ import './demo/material_components.dart';
 import './demo/state_manager_demo.dart';
 import './demo/rxdart/rxdart_demo.dart';
 import './demo/bloc/bloc_demo.dart';
+import './demo/http/http_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/bloc',
+      initialRoute: '/http',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         '/state': (context) => StateManagerDemo(),
         '/rxdart': (context) => RxDartDome(),
         '/bloc': (context) => BlocDemo(),
+        '/http': (context) => HttpDemo(),
       },
       theme: ThemeData(
           primarySwatch: Colors.yellow,
