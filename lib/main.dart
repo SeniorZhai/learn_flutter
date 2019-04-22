@@ -14,6 +14,8 @@ import './demo/rxdart/rxdart_demo.dart';
 import './demo/bloc/bloc_demo.dart';
 import './demo/http/http_demo.dart';
 import './demo/animation/animation_demo.dart';
+import './demo/i18n/i18n_demo.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,8 +23,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en', 'US'),
+        Locale('zh', 'CN'),
+      ],
       debugShowCheckedModeBanner: false,
-      initialRoute: '/animation',
+      initialRoute: '/i18n',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
@@ -32,7 +42,8 @@ class MyApp extends StatelessWidget {
         '/rxdart': (context) => RxDartDome(),
         '/bloc': (context) => BlocDemo(),
         '/http': (context) => HttpDemo(),
-        '/animation': (context) => AnimationDemo()
+        '/animation': (context) => AnimationDemo(),
+        '/i18n': (context) => I18nDemo()
       },
       theme: ThemeData(
           primarySwatch: Colors.yellow,
