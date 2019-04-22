@@ -29,6 +29,10 @@ class _AnimationDemoHomeState extends State<AnimationDemoHome>
       // print('${animationDemoController.value}');
       setState(() {});
     });
+    animationDemoController.addStatusListener((AnimationStatus status) {
+      print(status);
+    });
+
     // animationDemoController.forward();
   }
 
@@ -46,10 +50,20 @@ class _AnimationDemoHomeState extends State<AnimationDemoHome>
         elevation: 0.0,
       ),
       body: Center(
-        child: ActionChip(
-          label: Text('${animationDemoController.value}'),
+        child: IconButton(
+          icon: Icon(
+            Icons.favorite,
+            color: Colors.red,
+          ),
+          iconSize: animationDemoController.value,
           onPressed: () {
-            animationDemoController.forward();
+            switch (animationDemoController.status) {
+              case AnimationStatus.completed:
+                animationDemoController.reverse();
+                break;
+              default:
+                animationDemoController.forward();
+            }
           },
         ),
       ),
