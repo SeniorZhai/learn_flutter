@@ -13,6 +13,7 @@ import './demo/state_manager_demo.dart';
 import './demo/rxdart/rxdart_demo.dart';
 import './demo/bloc/bloc_demo.dart';
 import './demo/http/http_demo.dart';
+import './demo/animation/animation_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/http',
+      initialRoute: '/animation',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/rxdart': (context) => RxDartDome(),
         '/bloc': (context) => BlocDemo(),
         '/http': (context) => HttpDemo(),
+        '/animation': (context) => AnimationDemo()
       },
       theme: ThemeData(
           primarySwatch: Colors.yellow,
