@@ -31,6 +31,12 @@ class _RxDartDemoHomeState extends State<RxDartDemoHome> {
     // Observable.just('hello');
     Observable.periodic(Duration(seconds: 3), (x) => x.toString());
     _observable.listen(print);
+    PublishSubject<String> _subject = PublishSubject<String>();
+    _subject.listen((data) => print('listen1: $data'));
+    _subject.add('hello');
+    _subject.listen((data) => print('listen2: $data'));
+    _subject.add('hola');
+    _subject.close();
   }
 
   @override
