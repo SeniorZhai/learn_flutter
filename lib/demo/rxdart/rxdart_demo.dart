@@ -32,10 +32,11 @@ class _RxDartDemoHomeState extends State<RxDartDemoHome> {
     Observable.periodic(Duration(seconds: 3), (x) => x.toString());
     _observable.listen(print);
     // PublishSubject<String> _subject = PublishSubject<String>();
-    BehaviorSubject<String> _subject = BehaviorSubject<String>();
+    // BehaviorSubject<String> _subject = BehaviorSubject<String>();
+    ReplaySubject<String> _subject = ReplaySubject(maxSize: 2);
     _subject.add('hello');
     _subject.add('hola');
-
+    _subject.add('hi');
     _subject.listen((data) => print('listen1: $data'));
     _subject.listen((data) => print('listen2: $data'));
 
