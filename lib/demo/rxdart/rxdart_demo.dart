@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 import 'dart:async';
 
-class RxDartDemo extends StatelessWidget {
+class RxDartDome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
