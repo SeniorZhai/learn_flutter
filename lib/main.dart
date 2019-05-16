@@ -17,7 +17,15 @@ import './demo/animation/animation_demo.dart';
 import './demo/i18n/i18n_demo.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-void main() => runApp(MyApp());
+import 'dart:io' show Platform;
+
+import 'package:flutter/foundation.dart'
+    show debugDefaultTargetPlatformOverride;
+
+void main() {
+  debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -32,7 +40,7 @@ class MyApp extends StatelessWidget {
         Locale('zh', 'CN'),
       ],
       debugShowCheckedModeBanner: false,
-      initialRoute: '/i18n',
+      initialRoute: '/mdc',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
