@@ -10,6 +10,7 @@ import './demo/navigator_demo.dart';
 import './demo/form_demo.dart';
 import './demo/material_components.dart';
 import './demo/state_manager_demo.dart';
+import './demo/stream_demo.dart';
 import './demo/rxdart/rxdart_demo.dart';
 import './demo/bloc/bloc_demo.dart';
 import './demo/http/http_demo.dart';
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
         '/form': (context) => FormDemo(),
         '/mdc': (context) => MaterialComponents(),
         '/state': (context) => StateManagerDemo(),
+        '/stream': (context) => StreamDemo(),
         '/rxdart': (context) => RxDartDome(),
         '/bloc': (context) => BlocDemo(),
         '/http': (context) => HttpDemo(),
