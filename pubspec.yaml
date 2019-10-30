@@ -15,12 +15,12 @@ version: 1.0.0+1
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
-  flutter: ">=1.5.9-pre.252"
+  flutter: ">=1.6.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  intl: 0.15.8
+  intl: 0.16.0
   scoped_model: ^0.3.0
   rxdart: ^0.18.1
   http: ^0.12.0+2
