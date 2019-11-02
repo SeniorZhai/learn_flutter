@@ -4,6 +4,7 @@ class NavigatorDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("Navigator"), elevation: 0),
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -60,7 +60,10 @@ class DrawerDemo extends StatelessWidget {
               color: Colors.black12,
               size: 22.0,
             ),
-            onTap: () => Navigator.pop(context), // close drawer
+            onTap: () => {
+              Navigator.pop(context),
+              Navigator.pop(context)
+            }, // close drawer
           )
         ],
       ),

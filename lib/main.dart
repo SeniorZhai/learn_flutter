@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import './home.dart';
+import './demo/navigator_demo.dart';
 
 import 'dart:io' show Platform;
 
@@ -26,7 +27,10 @@ class MyApp extends StatelessWidget {
       ],
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
-      routes: {'/': (context) => HomePage()},
+      routes: {
+        '/': (context) => HomePage(),
+        '/about': (context) => Page(title: 'about')
+      },
       theme: ThemeData(
           primarySwatch: Colors.yellow,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.13),
