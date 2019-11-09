@@ -27,7 +27,7 @@ class HeroDemo extends StatelessWidget {
        builder:(ctx)=>Scaffold(
          appBar: AppBar(title: Text("image")),
          body:Center(child:Hero(
-           tag:"hero-tag",
+           tag:"hero_tag",
            child:Image.asset('res/images/avatar.png')
          ))
        )
