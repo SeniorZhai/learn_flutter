@@ -17,9 +17,17 @@ class _DeviceInfoDemoState extends State<DeviceInfoDemo> {
       appBar: AppBar(title: Text("Device Info")),
       body: Container(
         padding: EdgeInsets.all(16),
-        child: Text(
-            _title
-        ),
+        child:Column(
+          children: <Widget>[
+            Text(
+                _title
+            ),
+            SizedBox(height: 8),
+            Text(
+              getScreenInfo()
+            )
+          ],
+        )
       ),
     );
   }
@@ -29,6 +37,28 @@ class _DeviceInfoDemoState extends State<DeviceInfoDemo> {
     setState(() {
       this._title = info;
     });
+  }
+
+  getScreenInfo(){
+    // full screen width and height
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
+    // height without SafeArea
+    var padding = MediaQuery.of(context).padding;
+    double height1 = height - padding.top - padding.bottom;
+
+    // height without status bar
+    double height2 = height - padding.top;
+
+    // height without status and toolbar
+    double height3 = height - padding.top - kToolbarHeight;
+
+    return <String,dynamic>{"width":width,
+      "height":height,
+      "padding_top": padding.top,
+      "padding_bottom":padding.bottom
+    }.toString();
   }
 
   Future<String> getDeviceInfo() async {
