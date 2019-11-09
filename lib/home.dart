@@ -3,6 +3,7 @@ import './demo/material_components.dart';
 import './demo/demo.dart';
 import './demo/navigator_demo.dart';
 import './demo/form_demo.dart';
+import './demo/device_info_demo.dart';
 import './demo/state_manager_demo.dart';
 import './demo/stream_demo.dart';
 import './demo/rxdart/rxdart_demo.dart';
@@ -27,6 +28,7 @@ class HomePage extends StatelessWidget {
           ListItem(title: 'About', page: Page(title: 'About')),
           ListItem(title: 'Navigator', page: NavigatorDemo()),
           ListItem(title: 'Form', page: FormDemo()),
+          ListItem(title: 'Device info', page: DeviceInfoDemo()),
           ListItem(title: 'State manager', page: StateManagerDemo()),
           ListItem(title: 'Stream', page: StreamDemo()),
           ListItem(title: 'RxDart', page: RxDartDome()),
