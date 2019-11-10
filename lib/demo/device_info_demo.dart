@@ -1,4 +1,6 @@
 import 'dart:io';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:device_info/device_info.dart';
 
@@ -16,19 +18,16 @@ class _DeviceInfoDemoState extends State<DeviceInfoDemo> {
     return Scaffold(
       appBar: AppBar(title: Text("Device Info")),
       body: Container(
-        padding: EdgeInsets.all(16),
-        child:Column(
-          children: <Widget>[
-            Text(
-                _title
-            ),
-            SizedBox(height: 8),
-            Text(
-              getScreenInfo()
-            )
-          ],
-        )
-      ),
+          padding: EdgeInsets.all(16),
+          child: Column(
+            children: <Widget>[
+              Text(_title),
+              SizedBox(height: 8),
+              Text(getScreenInfo()),
+              SizedBox(height: 8),
+              Text(getPhysicalSize().toString())
+            ],
+          )),
     );
   }
 
@@ -39,7 +38,11 @@ class _DeviceInfoDemoState extends State<DeviceInfoDemo> {
     });
   }
 
-  getScreenInfo(){
+  getPhysicalSize() {
+    return window.physicalSize;
+  }
+
+  getScreenInfo() {
     // full screen width and height
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
@@ -54,16 +57,17 @@ class _DeviceInfoDemoState extends State<DeviceInfoDemo> {
     // height without status and toolbar
     double height3 = height - padding.top - kToolbarHeight;
 
-    return <String,dynamic>{"width":width,
-      "height":height,
+    return <String, dynamic>{
+      "width": width,
+      "height": height,
       "padding_top": padding.top,
-      "padding_bottom":padding.bottom
+      "padding_bottom": padding.bottom
     }.toString();
   }
 
   Future<String> getDeviceInfo() async {
     DeviceInfoPlugin deviceInfo = new DeviceInfoPlugin();
-    if(Platform.isAndroid) {
+    if (Platform.isAndroid) {
       AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
       return _readAndroidBuildData(androidInfo).toString();
     } else if (Platform.isIOS) {
@@ -104,6 +108,7 @@ class _DeviceInfoDemoState extends State<DeviceInfoDemo> {
       'androidId': build.androidId
     };
   }
+
   Map<String, dynamic> _readIosDeviceInfo(IosDeviceInfo data) {
     return <String, dynamic>{
       'name': data.name,
@@ -121,5 +126,3 @@ class _DeviceInfoDemoState extends State<DeviceInfoDemo> {
     };
   }
 }
-
-
