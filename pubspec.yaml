@@ -1,4 +1,4 @@
-name: learn_flutter
+name: Bandage
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -35,6 +35,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   flutter_launcher_icons: ^0.7.4
   device_info: ^0.4.1+1
+  web_socket_channel: ^1.1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
