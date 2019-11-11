@@ -13,6 +13,7 @@ import './demo/web_socket_demo.dart';
 import './demo/sql/sql_demo.dart';
 import './demo/animation/animation_demo.dart';
 import './demo/i18n/i18n_demo.dart';
+import './demo/provider/provider_demo.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -38,7 +39,8 @@ class HomePage extends StatelessWidget {
           ListItem(title: 'WebSocket', page: WebSocketDemo()),
           ListItem(title: 'Sql', page: SqliteDemo()),
           ListItem(title: 'Animation', page: AnimationDemo()),
-          ListItem(title: 'I18n', page: I18nDemo())
+          ListItem(title: 'I18n', page: I18nDemo()),
+          ListItem(title: 'Provider', page: ProviderDemo())
         ],
       ),
     );
