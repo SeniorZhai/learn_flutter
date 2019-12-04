@@ -29,7 +29,6 @@ class QrCodeView extends StatelessWidget {
     final code = QrCode(typeNumber, errorCorrectLevel)
       ..addData(data)
       ..make();
-    print(code.moduleCount);
     final squares = <bool>[];
 
     for (var x = 0; x < code.moduleCount; x++) {
