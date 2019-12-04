@@ -15,6 +15,8 @@ import './demo/sql/sql_demo.dart';
 import './demo/animation/animation_demo.dart';
 import './demo/i18n/i18n_demo.dart';
 import './demo/provider/provider_demo.dart';
+import './demo/painter/painter_demo.dart';
+import './demo/qr/qr_demo.dart';
 import 'dart:io';
 
 class HomePage extends StatelessWidget {
@@ -33,11 +35,13 @@ class HomePage extends StatelessWidget {
     list.add(ListItem(title: 'Bloc', page: BlocDemo()));
     list.add(ListItem(title: 'Animation', page: AnimationDemo()));
     list.add(ListItem(title: 'I18n', page: I18nDemo()));
+    list.add(ListItem(title: 'Dio', page: DioDemo()));
     list.add(ListItem(title: 'Provider', page: ProviderDemo()));
+    list.add(ListItem(title: 'Painter', page: PainterDemo()));
+    list.add(ListItem(title: 'Qr', page: QrDemo()));
     if (Platform.isAndroid || Platform.isIOS) {
       list.add(ListItem(title: 'Http', page: HttpDemo()));
       list.add(ListItem(title: 'WebSocket', page: WebSocketDemo()));
-      list.add(ListItem(title: 'Dio', page: DioDemo()));
       list.add(ListItem(title: 'Sql', page: SqliteDemo()));
     }
     return Scaffold(
