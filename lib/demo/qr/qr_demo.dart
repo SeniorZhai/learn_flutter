@@ -7,7 +7,7 @@ class QrDemo extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(title: Text('Qr')),
         body: Center(
-          child: QrCodeView(data: "QrCode test"),
+          child: QrCodeView(data: "QrCode test", isRound: true),
         ));
   }
 }
@@ -18,12 +18,17 @@ class QrCodeView extends StatelessWidget {
   Color backgroundColor;
   int typeNumber;
   int errorCorrectLevel;
+  bool isRound;
   QrCodeView(
       {this.data,
       this.typeNumber = 5,
       this.errorCorrectLevel = 2,
       this.qrColor = Colors.black,
-      this.backgroundColor = Colors.white});
+      this.backgroundColor = Colors.white,
+      this.isRound = false})
+      : assert(data != null),
+        assert(typeNumber > 0 && typeNumber <= 10),
+        assert(errorCorrectLevel >= 0 && errorCorrectLevel < 4);
   @override
   Widget build(BuildContext context) {
     final code = QrCode(typeNumber, errorCorrectLevel)
@@ -37,8 +42,8 @@ class QrCodeView extends StatelessWidget {
       }
     }
     return new CustomPaint(
-      foregroundPainter:
-          new QrPainter(moduleCount: code.moduleCount, squares: squares),
+      foregroundPainter: new QrPainter(
+          moduleCount: code.moduleCount, squares: squares, isRound: isRound),
       child: Container(
           width: 200,
           height: 200,
@@ -51,7 +56,8 @@ class QrPainter extends CustomPainter {
   int moduleCount;
   List<bool> squares;
   Color qrColor;
-  QrPainter({this.moduleCount, this.squares, this.qrColor});
+  bool isRound;
+  QrPainter({this.moduleCount, this.squares, this.qrColor, this.isRound});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -64,9 +70,17 @@ class QrPainter extends CustomPainter {
     for (var x = 0; x < moduleCount; x++) {
       for (var y = 0; y < moduleCount; y++) {
         if (squares[x * moduleCount + y]) {
-          Rect rect = Rect.fromLTWH(x * (itemWidth + 0.1),
-              y * (itemWidth + 0.1), itemWidth, itemWidth);
-          canvas.drawRect(rect, paint);
+          if (isRound) {
+            Offset offset = Offset(
+              x * (itemWidth + 0.1),
+              y * (itemWidth + 0.1),
+            );
+            canvas.drawCircle(offset, itemWidth / 2, paint);
+          } else {
+            Rect rect = Rect.fromLTWH(x * (itemWidth + 0.1),
+                y * (itemWidth + 0.1), itemWidth, itemWidth);
+            canvas.drawRect(rect, paint);
+          }
         }
       }
     }
