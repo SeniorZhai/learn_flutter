@@ -5,6 +5,7 @@ import './demo/navigator_demo.dart';
 import './demo/animate/animate_demo.dart';
 import './demo/form_demo.dart';
 import './demo/sunflower_demo.dart';
+import './demo/physics/physics_demo.dart';
 import './demo/device_info_demo.dart';
 import './demo/state_manager_demo.dart';
 import './demo/stream_demo.dart';
@@ -32,6 +33,7 @@ class HomePage extends StatelessWidget {
       ..add(ListItem(title: 'Navigator', page: NavigatorDemo()))
       ..add(ListItem(title: 'Form', page: FormDemo()))
       ..add(ListItem(title: 'Sunflower', page: SunflowerDemo()))
+      ..add(ListItem(title: 'Physics', page: PhysicsDemo()))
       ..add(ListItem(title: 'Device info', page: DeviceInfoDemo()))
       ..add(ListItem(title: 'State manager', page: StateManagerDemo()))
       ..add(ListItem(title: 'Stream', page: StreamDemo()))
