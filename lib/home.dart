@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './demo/material_components.dart';
 import './demo/demo.dart';
 import './demo/navigator_demo.dart';
+import './demo/animate/animate_demo.dart';
 import './demo/form_demo.dart';
 import './demo/device_info_demo.dart';
 import './demo/state_manager_demo.dart';
@@ -22,24 +23,25 @@ import 'dart:io';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<Widget> list = new List<Widget>();
-    list.add(ListItem(title: 'MaterialComponents', page: MaterialComponents()));
-    list.add(ListItem(title: 'Demo', page: DemoPage()));
-    list.add(ListItem(title: 'About', page: Page(title: 'About')));
-    list.add(ListItem(title: 'Navigator', page: NavigatorDemo()));
-    list.add(ListItem(title: 'Form', page: FormDemo()));
-    list.add(ListItem(title: 'Device info', page: DeviceInfoDemo()));
-    list.add(ListItem(title: 'State manager', page: StateManagerDemo()));
-    list.add(ListItem(title: 'Stream', page: StreamDemo()));
-    list.add(ListItem(title: 'RxDart', page: RxDartDome()));
-    list.add(ListItem(title: 'Bloc', page: BlocDemo()));
-    list.add(ListItem(title: 'Animation', page: AnimationDemo()));
-    list.add(ListItem(title: 'I18n', page: I18nDemo()));
-    list.add(ListItem(title: 'Dio', page: DioDemo()));
-    list.add(ListItem(title: 'Provider', page: ProviderDemo()));
-    list.add(ListItem(title: 'Painter', page: PainterDemo()));
-    list.add(ListItem(title: 'Qr', page: QrDemo()));
-    list.add(ListItem(title: 'WebSocket', page: WebSocketDemo()));
+    List<Widget> list = new List<Widget>()
+      ..add(ListItem(title: 'MaterialComponents', page: MaterialComponents()))
+      ..add(ListItem(title: 'Demo', page: DemoPage()))
+      ..add(ListItem(title: 'About', page: Page(title: 'About')))
+      ..add(ListItem(title: 'Animate', page: AnimateDemo()))
+      ..add(ListItem(title: 'Navigator', page: NavigatorDemo()))
+      ..add(ListItem(title: 'Form', page: FormDemo()))
+      ..add(ListItem(title: 'Device info', page: DeviceInfoDemo()))
+      ..add(ListItem(title: 'State manager', page: StateManagerDemo()))
+      ..add(ListItem(title: 'Stream', page: StreamDemo()))
+      ..add(ListItem(title: 'RxDart', page: RxDartDome()))
+      ..add(ListItem(title: 'Bloc', page: BlocDemo()))
+      ..add(ListItem(title: 'Animation', page: AnimationDemo()))
+      ..add(ListItem(title: 'I18n', page: I18nDemo()))
+      ..add(ListItem(title: 'Dio', page: DioDemo()))
+      ..add(ListItem(title: 'Provider', page: ProviderDemo()))
+      ..add(ListItem(title: 'Painter', page: PainterDemo()))
+      ..add(ListItem(title: 'Qr', page: QrDemo()))
+      ..add(ListItem(title: 'WebSocket', page: WebSocketDemo()));
     if (Platform.isAndroid || Platform.isIOS) {
       list.add(ListItem(title: 'Http', page: HttpDemo()));
       list.add(ListItem(title: 'Sql', page: SqliteDemo()));
