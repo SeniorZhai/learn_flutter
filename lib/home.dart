@@ -39,9 +39,9 @@ class HomePage extends StatelessWidget {
     list.add(ListItem(title: 'Provider', page: ProviderDemo()));
     list.add(ListItem(title: 'Painter', page: PainterDemo()));
     list.add(ListItem(title: 'Qr', page: QrDemo()));
+    list.add(ListItem(title: 'WebSocket', page: WebSocketDemo()));
     if (Platform.isAndroid || Platform.isIOS) {
       list.add(ListItem(title: 'Http', page: HttpDemo()));
-      list.add(ListItem(title: 'WebSocket', page: WebSocketDemo()));
       list.add(ListItem(title: 'Sql', page: SqliteDemo()));
     }
     return Scaffold(
