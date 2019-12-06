@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
     List<Widget> list = new List<Widget>()
       ..add(ListItem(title: 'MaterialComponents', page: MaterialComponents()))
       ..add(ListItem(title: 'Demo', page: DemoPage()))
-      ..add(ListItem(title: 'About', page: Page(title: 'About')))
+      ..add(ListItem(title: 'Navigator', page: NavigatorDemo(title: 'About')))
       ..add(ListItem(title: 'Animate', page: AnimateDemo()))
       ..add(ListItem(title: 'Navigator', page: NavigatorDemo()))
       ..add(ListItem(title: 'Form', page: FormDemo()))
