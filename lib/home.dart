@@ -20,6 +20,7 @@ import './demo/i18n/i18n_demo.dart';
 import './demo/provider/provider_demo.dart';
 import './demo/painter/painter_demo.dart';
 import './demo/qr/qr_demo.dart';
+import './demo/game.dart';
 import 'dart:io';
 
 class HomePage extends StatelessWidget {
@@ -28,7 +29,7 @@ class HomePage extends StatelessWidget {
     List<Widget> list = new List<Widget>()
       ..add(ListItem(title: 'MaterialComponents', page: MaterialComponents()))
       ..add(ListItem(title: 'Demo', page: DemoPage()))
-      ..add(ListItem(title: 'Navigator', page: NavigatorDemo(title: 'About')))
+      ..add(ListItem(title: 'Navigator', page: NavigatorDemo()))
       ..add(ListItem(title: 'Animate', page: AnimateDemo()))
       ..add(ListItem(title: 'Navigator', page: NavigatorDemo()))
       ..add(ListItem(title: 'Form', page: FormDemo()))
@@ -45,6 +46,7 @@ class HomePage extends StatelessWidget {
       ..add(ListItem(title: 'Provider', page: ProviderDemo()))
       ..add(ListItem(title: 'Painter', page: PainterDemo()))
       ..add(ListItem(title: 'Qr', page: QrDemo()))
+      ..add(ListItem(title: 'Game', page: Game()))
       ..add(ListItem(title: 'WebSocket', page: WebSocketDemo()));
     if (Platform.isAndroid || Platform.isIOS) {
       list.add(ListItem(title: 'Http', page: HttpDemo()));
