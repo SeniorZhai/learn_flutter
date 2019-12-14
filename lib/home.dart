@@ -21,6 +21,7 @@ import './demo/provider/provider_demo.dart';
 import './demo/painter/painter_demo.dart';
 import './demo/qr/qr_demo.dart';
 import './demo/game.dart';
+import './speed_code/speed_code.dart';
 import 'dart:io';
 
 class HomePage extends StatelessWidget {
@@ -47,7 +48,8 @@ class HomePage extends StatelessWidget {
       ..add(ListItem(title: 'Painter', page: PainterDemo()))
       ..add(ListItem(title: 'Qr', page: QrDemo()))
       ..add(ListItem(title: 'Game', page: Game()))
-      ..add(ListItem(title: 'WebSocket', page: WebSocketDemo()));
+      ..add(ListItem(title: 'WebSocket', page: WebSocketDemo()))
+      ..add(ListItem(title: 'SpeedCode', page: SpeedCode()));
     if (Platform.isAndroid || Platform.isIOS) {
       list.add(ListItem(title: 'Http', page: HttpDemo()));
       list.add(ListItem(title: 'Sql', page: SqliteDemo()));
