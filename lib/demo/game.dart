@@ -65,7 +65,7 @@ class _TwoPlayerGameState extends State<TwoPlayerGame>
             scoreBoard,
             Padding(
               padding: const EdgeInsets.only(
-                  left: 100.0, right: 100.0, top: 40, bottom: 40),
+                  left: 16, right: 16, top: 16, bottom: 16),
               child: Stack(
                 children: <Widget>[
                   board,
