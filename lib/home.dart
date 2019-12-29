@@ -17,7 +17,6 @@ import './demo/http/http_demo.dart';
 import './demo/dio/dio_demo.dart';
 import './demo/web_socket_demo.dart';
 import './demo/sql/sql_demo.dart';
-import './demo/animation/animation_demo.dart';
 import './demo/i18n/i18n_demo.dart';
 import './demo/provider/provider_demo.dart';
 import './demo/painter/painter_demo.dart';
@@ -44,7 +43,6 @@ class HomePage extends StatelessWidget {
       ..add(ListItem(title: 'Stream', page: StreamDemo()))
       ..add(ListItem(title: 'RxDart', page: RxDartDome()))
       ..add(ListItem(title: 'Bloc', page: BlocDemo()))
-      ..add(ListItem(title: 'Animation', page: AnimationDemo()))
       ..add(ListItem(title: 'I18n', page: I18nDemo()))
       ..add(ListItem(title: 'Dio', page: DioDemo()))
       ..add(ListItem(title: 'Provider', page: ProviderDemo()))

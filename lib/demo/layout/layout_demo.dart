@@ -18,7 +18,7 @@ class LayoutDemo extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter'),
+        title: Text('Layout'),
         elevation: 0.0,
       ),
       body: ListView(children: list),
