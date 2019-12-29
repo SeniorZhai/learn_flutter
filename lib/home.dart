@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './list_item.dart';
+import './demo/layout/layout_demo.dart';
 import './demo/material_components.dart';
 import './demo/demo.dart';
 import './demo/navigator_demo.dart';
@@ -28,6 +30,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> list = new List<Widget>()
+      ..add(ListItem(title: 'Layout', page: LayoutDemo()))
       ..add(ListItem(title: 'MaterialComponents', page: MaterialComponents()))
       ..add(ListItem(title: 'Demo', page: DemoPage()))
       ..add(ListItem(title: 'Navigator', page: NavigatorDemo()))
@@ -60,22 +63,6 @@ class HomePage extends StatelessWidget {
         elevation: 0.0,
       ),
       body: ListView(children: list),
-    );
-  }
-}
-
-class ListItem extends StatelessWidget {
-  final String title;
-  final Widget page;
-  ListItem({this.title, this.page});
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(title),
-      onTap: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => page));
-      },
     );
   }
 }
