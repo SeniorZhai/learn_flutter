@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
 import '../../list_item.dart';
+import './alert_dialog_demo.dart';
 import './button_demo.dart';
+import './bottom_sheet_demo.dart';
+import './check_box_demo.dart';
+import './clip_demo.dart';
+import './card_demo.dart';
+import './date_time_demo.dart';
+import './data_table_demo.dart';
+import './expansion_panel_demo.dart';
 import './floatingbutton_demo.dart';
 import './popup_menu.dart';
-import './check_box_demo.dart';
 import './radio_demo.dart';
 import './switch_demo.dart';
 import './slider_demo.dart';
-import './date_time_demo.dart';
 import './simple_dialog_demo.dart';
-import './alert_dialog_demo.dart';
-import './bottom_sheet_demo.dart';
 import './snack_bar_demo.dart';
-import './expansion_panel_demo.dart';
-import './clip_demo.dart';
-import './data_table_demo.dart';
-import './paginated_data_table_demo.dart';
-import './card_demo.dart';
 import './stepper_demo.dart';
+import './opacity_demo.dart';
+import './paginated_data_table_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -29,6 +30,10 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: 'AlertDialog',
+            page: AlertDialogDemo(),
+          ),
           ListItem(
             title: 'Button',
             page: ButtonDemo(),
@@ -66,8 +71,8 @@ class MaterialComponents extends StatelessWidget {
             page: SimpleDialogDemo(),
           ),
           ListItem(
-            title: 'AlertDialog',
-            page: AlertDialogDemo(),
+            title: 'Opacity',
+            page: OpacityDemo(),
           ),
           ListItem(
             title: 'BottomSheet',
