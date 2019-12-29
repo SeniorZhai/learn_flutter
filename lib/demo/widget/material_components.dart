@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../list_item.dart';
+import '../../list_item.dart';
 import './button_demo.dart';
 import './floatingbutton_demo.dart';
 import './popup_menu.dart';
@@ -7,7 +7,6 @@ import './check_box_demo.dart';
 import './radio_demo.dart';
 import './switch_demo.dart';
 import './slider_demo.dart';
-import './hero_demo.dart';
 import './date_time_demo.dart';
 import './simple_dialog_demo.dart';
 import './alert_dialog_demo.dart';
@@ -89,10 +88,6 @@ class MaterialComponents extends StatelessWidget {
           ListItem(
             title: 'DataTable',
             page: DataTableDemo(),
-          ),
-          ListItem(
-            title: 'Hero',
-            page: HeroDemo(),
           ),
           ListItem(
             title: 'PaginatedDataTable',

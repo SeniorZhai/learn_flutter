@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import './list_item.dart';
 import './demo/layout/layout_demo.dart';
-import './demo/material_components.dart';
+import './demo/widget/material_components.dart';
 import './demo/demo.dart';
 import './demo/navigator_demo.dart';
 import './demo/animate/animate_demo.dart';

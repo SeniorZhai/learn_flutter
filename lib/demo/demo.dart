@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './list_demo.dart';
 import './basic_demo.dart';
 import './layout_demo.dart';
-import './sliver_demo.dart';
+import './widget/sliver_demo.dart';
 import './drawer_demo.dart';
 import './bottom_navagation_demo.dart';
 
