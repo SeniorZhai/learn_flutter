@@ -10,12 +10,8 @@ import './demo/sunflower_demo.dart';
 import './demo/physics/physics_demo.dart';
 import './demo/device_info_demo.dart';
 import './demo/state_manager_demo.dart';
-import './demo/stream_demo.dart';
-import './demo/rxdart/rxdart_demo.dart';
-import './demo/bloc/bloc_demo.dart';
-import './demo/http/http_demo.dart';
-import './demo/dio/dio_demo.dart';
-import './demo/web_socket_demo.dart';
+import './demo/network/network_demo.dart';
+import './demo/async/async_demo.dart';
 import './demo/sql/sql_demo.dart';
 import './demo/i18n/i18n_demo.dart';
 import './demo/provider/provider_demo.dart';
@@ -31,7 +27,6 @@ class HomePage extends StatelessWidget {
     List<Widget> list = new List<Widget>()
       ..add(ListItem(title: 'Layout', page: LayoutDemo()))
       ..add(ListItem(title: 'MaterialComponents', page: MaterialComponents()))
-      ..add(ListItem(title: 'Demo', page: DemoPage()))
       ..add(ListItem(title: 'Navigator', page: NavigatorDemo()))
       ..add(ListItem(title: 'Animate', page: AnimateDemo()))
       ..add(ListItem(title: 'Navigator', page: NavigatorDemo()))
@@ -40,19 +35,16 @@ class HomePage extends StatelessWidget {
       ..add(ListItem(title: 'Physics', page: PhysicsDemo()))
       ..add(ListItem(title: 'Device info', page: DeviceInfoDemo()))
       ..add(ListItem(title: 'State manager', page: StateManagerDemo()))
-      ..add(ListItem(title: 'Stream', page: StreamDemo()))
-      ..add(ListItem(title: 'RxDart', page: RxDartDome()))
-      ..add(ListItem(title: 'Bloc', page: BlocDemo()))
+      ..add(ListItem(title: 'Async', page: AsyncDemo()))
+      ..add(ListItem(title: 'Network', page: NetworkDemo()))
       ..add(ListItem(title: 'I18n', page: I18nDemo()))
-      ..add(ListItem(title: 'Dio', page: DioDemo()))
       ..add(ListItem(title: 'Provider', page: ProviderDemo()))
       ..add(ListItem(title: 'Painter', page: PainterDemo()))
       ..add(ListItem(title: 'Qr', page: QrDemo()))
       ..add(ListItem(title: 'Game', page: Game()))
-      ..add(ListItem(title: 'WebSocket', page: WebSocketDemo()))
-      ..add(ListItem(title: 'SpeedCode', page: SpeedCode()));
+      ..add(ListItem(title: 'SpeedCode', page: SpeedCode()))
+      ..add(ListItem(title: 'Complete', page: DemoPage()));
     if (Platform.isAndroid || Platform.isIOS) {
-      list.add(ListItem(title: 'Http', page: HttpDemo()));
       list.add(ListItem(title: 'Sql', page: SqliteDemo()));
     }
     return Scaffold(
