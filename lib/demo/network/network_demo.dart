@@ -4,13 +4,15 @@ import '../../list_item.dart';
 import './dio_demo.dart';
 import './http/http_demo.dart';
 import './web_socket_demo.dart';
+import './future_builder_demo.dart';
 
 class NetworkDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> list = new List<Widget>()
       ..add(ListItem(title: 'Dio', page: DioDemo()))
-      ..add(ListItem(title: 'Websocket', page: WebSocketDemo()));
+      ..add(ListItem(title: 'Websocket', page: WebSocketDemo()))
+      ..add(ListItem(title: 'Feature builder', page: FutureBuilderDemo()));
     if (Platform.isAndroid || Platform.isIOS) {
       list.add(ListItem(title: 'Http', page: HttpDemo()));
     }
