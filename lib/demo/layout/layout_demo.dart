@@ -5,6 +5,7 @@ import './wrap_demo.dart';
 import './align_demo.dart';
 import './expanded_demo.dart';
 import './position_demo.dart';
+import './flex_demo.dart';
 
 class LayoutDemo extends StatelessWidget {
   @override
@@ -14,7 +15,8 @@ class LayoutDemo extends StatelessWidget {
       ..add(ListItem(title: 'Align', page: AlignDemo()))
       ..add(ListItem(title: 'Expanded', page: ExpandedDemo()))
       ..add(ListItem(title: 'Positioned', page: PositionedDemo()))
-      ..add(ListItem(title: 'Wrap', page: WrapDemo()));
+      ..add(ListItem(title: 'Wrap', page: WrapDemo()))
+      ..add(ListItem(title: 'Flex', page: FlexDemo()));
 
     return Scaffold(
       appBar: AppBar(
