@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './list_item.dart';
 import './demo/layout/layout_demo.dart';
+import './demo/cupertino/cupertino_demo.dart';
 import './demo/widget/material_components.dart';
 import './demo/demo.dart';
 import './demo/navigator_demo.dart';
@@ -26,6 +27,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Widget> list = new List<Widget>()
       ..add(ListItem(title: 'Layout', page: LayoutDemo()))
+      ..add(ListItem(title: 'Cupertino', page: CupertinoDemo()))
       ..add(ListItem(title: 'MaterialComponents', page: MaterialComponents()))
       ..add(ListItem(title: 'Navigator', page: NavigatorDemo()))
       ..add(ListItem(title: 'Animate', page: AnimateDemo()))
