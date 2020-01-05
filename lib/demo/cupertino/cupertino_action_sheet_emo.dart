@@ -10,7 +10,7 @@ class CupertinoActionSheetDemo extends StatelessWidget {
             width: double.maxFinite,
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              RaisedButton(
+              CupertinoButton(
                   color: Colors.blue[200],
                   child: Text("click"),
                   onPressed: () => {showSheet(context)})
@@ -26,40 +26,27 @@ class CupertinoActionSheetDemo extends StatelessWidget {
             actions: <Widget>[
               CupertinoActionSheetAction(
                 child: const Text('🙋 Yes'),
-                onPressed: () {
-                  Navigator.pop(context, '🙋 Yes');
-                },
+                onPressed: () {},
               ),
               CupertinoActionSheetAction(
                 child: const Text('🙋 No'),
-                onPressed: () {
-                  Navigator.pop(context, '🙋 No');
-                },
+                onPressed: () {},
               ),
               CupertinoActionSheetAction(
                 child: const Text("🙋 Can't say"),
-                onPressed: () {
-                  Navigator.pop(context, "🙋 Can't say");
-                },
+                onPressed: () {},
               ),
               CupertinoActionSheetAction(
                 child: const Text("🙋 Decide in next post"),
-                onPressed: () {
-                  Navigator.pop(context, "🙋 Decide in next post");
-                },
+                onPressed: () {},
               )
             ],
             cancelButton: CupertinoActionSheetAction(
               child: const Text('Cancel'),
               isDefaultAction: true,
-              onPressed: () {
-                Navigator.pop(context, 'Cancel');
-              },
-            ))).then<void>((String value) => {
-          Scaffold.of(context).showSnackBar(new SnackBar(
-            content: new Text('You clicked $value'),
-            duration: Duration(milliseconds: 800),
-          ))
-        });
+              onPressed: () {},
+            ))).then<void>((String value) {
+      print('$value');
+    });
   }
 }
