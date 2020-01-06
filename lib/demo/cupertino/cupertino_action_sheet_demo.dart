@@ -12,7 +12,7 @@ class CupertinoActionSheetDemo extends StatelessWidget {
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
               CupertinoButton(
                   color: Colors.blue[200],
-                  child: Text("click"),
+                  child: Text("Show dialog"),
                   onPressed: () => {showSheet(context)})
             ])));
   }
@@ -21,30 +21,40 @@ class CupertinoActionSheetDemo extends StatelessWidget {
     showCupertinoModalPopup<String>(
         context: context,
         builder: (BuildContext context) => CupertinoActionSheet(
-            title: const Text('Choose frankly 😊'),
-            message: const Text('Your options are '),
+            title: const Text('Choose frankly'),
+            message: const Text('Your options are'),
             actions: <Widget>[
               CupertinoActionSheetAction(
                 child: const Text('🙋 Yes'),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context, 'Yes');
+                },
               ),
               CupertinoActionSheetAction(
                 child: const Text('🙋 No'),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context, 'No');
+                },
               ),
               CupertinoActionSheetAction(
                 child: const Text("🙋 Can't say"),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context, 'Say');
+                },
               ),
               CupertinoActionSheetAction(
                 child: const Text("🙋 Decide in next post"),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context, 'No');
+                },
               )
             ],
             cancelButton: CupertinoActionSheetAction(
               child: const Text('Cancel'),
               isDefaultAction: true,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context, 'Cancel');
+              },
             ))).then<void>((String value) {
       print('$value');
     });

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class CupertinoAlertDialogWidget extends StatefulWidget {
+class CupertinoAlertDialogDemo extends StatefulWidget {
   @override
-  _CupertinoAlertDialogWidgetState createState() =>
-      _CupertinoAlertDialogWidgetState();
+  _CupertinoAlertDialogDemoState createState() =>
+      _CupertinoAlertDialogDemoState();
 }
 
-class _CupertinoAlertDialogWidgetState
-    extends State<CupertinoAlertDialogWidget> {
+class _CupertinoAlertDialogDemoState extends State<CupertinoAlertDialogDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
