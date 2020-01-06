@@ -54,19 +54,21 @@ class _LoginPageState extends State<LoginPage> {
             children: <Widget>[
               Padding(
                 padding: EdgeInsets.only(top: 50.0),
-                child: Image.asset("assets/image_01.png"),
+                child: Image.asset("assets/login/image_01.png"),
               ),
               Expanded(
                 child: Container(),
               ),
-              Image.asset("assets/image_02.png")
+              Image.asset("assets/login/image_02.png")
             ],
           ),
           SingleChildScrollView(
               child: Padding(
                   padding: EdgeInsets.only(left: 28, right: 28, top: 60),
                   child: Column(children: <Widget>[
-                    Row(children: <Widget>[Image.asset('assets/logo.png')]),
+                    Row(children: <Widget>[
+                      Image.asset('assets/login/logo.png')
+                    ]),
                     Text("LOGO",
                         style: TextStyle(
                             fontFamily: "Poppins-Bold",

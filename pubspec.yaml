@@ -54,17 +54,19 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-     - res/images/
      - assets/
+     - assets/login/
+     - assets/story/
+     
   fonts:
     - family: CustomIcons
       fonts:
-        - asset: assets/CustomIcons.ttf
+        - asset: assets/login/CustomIcons.ttf
 
     - family: Poppins-Bold
       fonts:
-        - asset: assets/Poppins-Bold.ttf
+        - asset: assets/login/Poppins-Bold.ttf
 
     - family: Poppins-Medium
       fonts:
-        - asset: assets/Poppins-Medium.ttf      
+        - asset: assets/login/Poppins-Medium.ttf      
