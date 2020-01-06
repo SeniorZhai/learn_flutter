@@ -59,7 +59,7 @@ flutter:
      - assets/story/
      
   fonts:
-    - family: CustomIcons
+    - family: LoginIcons
       fonts:
         - asset: assets/login/CustomIcons.ttf
 
@@ -70,3 +70,19 @@ flutter:
     - family: Poppins-Medium
       fonts:
         - asset: assets/login/Poppins-Medium.ttf      
+   
+    - family: SF-Pro-Text-Regular
+      fonts:
+        - asset: assets/story/SF-Pro-Text-Regular.otf
+    
+    - family: SF-Pro-Text-Bold
+      fonts:
+        - asset: assets/story/SF-Pro-Text-Bold.otf
+
+    - family: Calibre-Semibold
+      fonts:
+        - asset: assets/story/Calibre Semibold.otf
+
+    - family: StoryIcons
+      fonts:
+        - asset: assets/story/custom_icons.ttf    
