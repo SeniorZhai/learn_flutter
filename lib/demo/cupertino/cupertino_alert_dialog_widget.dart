@@ -14,13 +14,6 @@ class _CupertinoAlertDialogWidgetState
     return Scaffold(
       appBar: AppBar(
         title: Text('CupertinoAlertDialog'),
-        centerTitle: true,
-        elevation: 0.0,
-        bottom: PreferredSize(
-          child: Text('iOS风格的alert dialog',
-              style: TextStyle(fontWeight: FontWeight.bold)),
-          preferredSize: Size.fromHeight(30.0),
-        ),
       ),
       body: Center(
         child: CupertinoButton(
@@ -36,7 +29,12 @@ class _CupertinoAlertDialogWidgetState
                   content: new Text("My alert message"),
                   actions: [
                     CupertinoDialogAction(
-                        isDefaultAction: true, child: new Text("Close"))
+                        isDefaultAction: true,
+                        child: new Text("Close"),
+                        onPressed: () {
+                          Navigator.of(context, rootNavigator: true)
+                              .pop("Discard");
+                        })
                   ],
                 );
               },
