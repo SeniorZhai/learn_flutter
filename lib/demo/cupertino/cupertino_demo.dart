@@ -5,7 +5,9 @@ import './cupertino_button_demo.dart';
 import './cupertino_activity_indicator_demo.dart';
 import './cupertino_action_sheet_demo.dart';
 import './cupertino_alert_dialog_demo.dart';
+import './cupertino_switch_demo.dart';
 import './cupertino_fullscreen_dialog_transition_demo.dart';
+import './cupertino_date_picker_demo.dart';
 import './cupertino_page_transition_demo.dart';
 
 class CupertinoDemo extends StatelessWidget {
@@ -23,6 +25,7 @@ class CupertinoDemo extends StatelessWidget {
       ..add(ListItem(
           title: 'CupertinoFullscreenDialogTransition',
           page: CupertinoFullscreenDialogTransitionDemo()))
+      ..add(ListItem(title: 'CupertinoSwitch', page: CupertinoSwitchDemo()))
       ..add(ListItem(
           title: 'CupertinoPageTransition',
           page: CupertinoPageTransitionDemo()));
