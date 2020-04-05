@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => HomePage(),
-        '/about': (context) => Page(title: 'about')
+        '/about': (context) => MyPage(title: 'about')
       },
       theme: ThemeData(
           primarySwatch: Colors.yellow,

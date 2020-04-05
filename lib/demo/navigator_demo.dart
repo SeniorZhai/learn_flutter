@@ -26,9 +26,9 @@ class NavigatorDemo extends StatelessWidget {
   }
 }
 
-class Page extends StatelessWidget {
+class MyPage extends StatelessWidget {
   final String title;
-  Page({this.title});
+  MyPage({this.title});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

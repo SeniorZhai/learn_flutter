@@ -15,19 +15,17 @@ version: 1.0.0+1
 
 environment:
   sdk: ">=2.2.2 <3.0.0"
-  flutter: ">=1.6.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  intl: 0.16.0
+  intl: ^0.16.0
   scoped_model: ^0.3.0
   rxdart: ^0.18.1
   http: ^0.12.0+2
   flutter_localizations:
     sdk: flutter
-
-  sqflite: ^1.1.7+1
+  sqflite: ^1.1.7+1 
 
   english_words: ^3.1.5
   # The following adds the Cupertino Icons font to your application.

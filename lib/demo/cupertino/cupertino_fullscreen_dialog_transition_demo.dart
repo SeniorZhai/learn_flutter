@@ -20,7 +20,9 @@ class _CupertinoFullscreenDialogTransitionDemoState
           child: Column(
             children: <Widget>[
               CupertinoFullscreenDialogTransition(
-                animation: _animationController,
+                linearTransition: true,
+                primaryRouteAnimation: _animationController,
+                secondaryRouteAnimation: _animationController,
                 child: Center(
                   child: Container(
                     color: Colors.blueGrey,
