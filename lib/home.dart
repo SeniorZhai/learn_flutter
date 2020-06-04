@@ -20,6 +20,7 @@ import './demo/painter/painter_demo.dart';
 import './demo/qr/qr_demo.dart';
 import './demo/game.dart';
 import './demo/blur_demo.dart';
+import './demo/trial.dart';
 import './speed_code/speed_code.dart';
 import 'dart:io';
 
@@ -47,7 +48,8 @@ class HomePage extends StatelessWidget {
       ..add(ListItem(title: 'Game', page: Game()))
       ..add(ListItem(title: 'Blur', page: BlurDemo()))
       ..add(ListItem(title: 'SpeedCode', page: SpeedCode()))
-      ..add(ListItem(title: 'Complete', page: DemoPage()));
+      ..add(ListItem(title: 'Complete', page: DemoPage()))
+      ..add(ListItem(title: 'Trial', page: Trial()));
     if (Platform.isAndroid || Platform.isIOS) {
       list.add(ListItem(title: 'Sql', page: SqliteDemo()));
     }
