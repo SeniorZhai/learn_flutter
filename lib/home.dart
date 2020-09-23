@@ -22,6 +22,7 @@ import './demo/game.dart';
 import './demo/blur_demo.dart';
 import './demo/trial.dart';
 import './speed_code/speed_code.dart';
+import './demo/shape_demo.dart';
 import 'dart:io';
 
 class HomePage extends StatelessWidget {
@@ -49,8 +50,9 @@ class HomePage extends StatelessWidget {
       ..add(ListItem(title: 'Blur', page: BlurDemo()))
       ..add(ListItem(title: 'SpeedCode', page: SpeedCode()))
       ..add(ListItem(title: 'Complete', page: DemoPage()))
-      ..add(ListItem(title: 'Trial', page: Trial()));
-    if (Platform.isAndroid || Platform.isIOS) {
+      ..add(ListItem(title: 'Trial', page: Trial()))
+      ..add(ListItem(title: 'Shape', page: ShapeDemo()));
+    if (Platform.isAndroid || Platform.isIOS || Platform.isMacOS) {
       list.add(ListItem(title: 'Sql', page: SqliteDemo()));
     }
     return Scaffold(
