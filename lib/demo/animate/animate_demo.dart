@@ -4,6 +4,7 @@ import './animated_container_demo.dart';
 import './animate_ball_demo.dart';
 import './animation_demo.dart';
 import './hero_demo.dart';
+import './rive_demo.dart';
 
 class AnimateDemo extends StatelessWidget {
   @override
@@ -13,7 +14,8 @@ class AnimateDemo extends StatelessWidget {
           ListItem(title: "Animated Container", page: AnimatedContainerDemo()))
       ..add(ListItem(title: 'Animate Ball', page: AnimateBallDemo()))
       ..add(ListItem(title: 'Animation', page: AnimationDemo()))
-      ..add(ListItem(title: 'Hero', page: HeroDemo()));
+      ..add(ListItem(title: 'Hero', page: HeroDemo()))
+      ..add(ListItem(title: 'Rive', page: RiveDemo()));
 
     return Scaffold(
       appBar: AppBar(

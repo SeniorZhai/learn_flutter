@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './list_item.dart';
+import 'package:Bandage/list_item.dart';
 import './demo/layout/layout_demo.dart';
 import './demo/cupertino/cupertino_demo.dart';
 import './demo/widget/material_components.dart';
@@ -10,7 +10,7 @@ import './demo/form_demo.dart';
 import './demo/sunflower_demo.dart';
 import './demo/physics/physics_demo.dart';
 import './demo/device_info_demo.dart';
-import './demo/state_manager_demo.dart';
+import './demo/state_management/state_management_demo.dart';
 import './demo/network/network_demo.dart';
 import './demo/async/async_demo.dart';
 import './demo/sql/sql_demo.dart';
@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
       ..add(ListItem(title: 'Sunflower', page: SunflowerDemo()))
       ..add(ListItem(title: 'Physics', page: PhysicsDemo()))
       ..add(ListItem(title: 'Device info', page: DeviceInfoDemo()))
-      ..add(ListItem(title: 'State manager', page: StateManagerDemo()))
+      ..add(ListItem(title: 'State management', page: StateManagementDemo()))
       ..add(ListItem(title: 'Async', page: AsyncDemo()))
       ..add(ListItem(title: 'Network', page: NetworkDemo()))
       ..add(ListItem(title: 'I18n', page: I18nDemo()))

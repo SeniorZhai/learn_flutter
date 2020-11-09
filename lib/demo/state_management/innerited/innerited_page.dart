@@ -15,9 +15,9 @@ class StateManagerDemo extends StatelessWidget {
           floatingActionButton: ScopedModelDescendant<CounterModel>(
             rebuildOnChange: false,
             builder: (context, _, model) => FloatingActionButton(
-                  child: Icon(Icons.add),
-                  onPressed: model.increaseCount,
-                ),
+              child: Icon(Icons.add),
+              onPressed: model.increaseCount,
+            ),
           ),
         ));
   }
@@ -37,9 +37,9 @@ class Counter extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScopedModelDescendant<CounterModel>(
       builder: (context, _, model) => ActionChip(
-            label: Text('${model.count}'),
-            onPressed: model.increaseCount,
-          ),
+        label: Text('${model.count}'),
+        onPressed: model.increaseCount,
+      ),
     );
   }
 }

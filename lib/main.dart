@@ -6,9 +6,12 @@ import './demo/navigator_demo.dart';
 import 'package:flutter/foundation.dart'
     show debugDefaultTargetPlatformOverride;
 import 'package:flutter/cupertino.dart';
+import './demo/state_management/bloc/counter_observer.dart';
+import 'package:bloc/bloc.dart';
 
 void main() {
   debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+  Bloc.observer = CounterObserver();
   runApp(MyApp());
 }
 

@@ -37,6 +37,10 @@ dependencies:
   provider: ^4.3.2+2
   dio: ^3.0.10
   qr: ^1.3.0
+  bloc: ^6.0.0
+  flutter_bloc: ^6.0.0
+  rive: ^0.6.2
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -55,7 +59,8 @@ flutter:
      - assets/
      - assets/login/
      - assets/story/
-     
+     - assets/rive/off_road_car.riv
+
   fonts:
     - family: LoginIcons
       fonts:
