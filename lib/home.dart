@@ -23,6 +23,7 @@ import './demo/blur_demo.dart';
 import './demo/trial.dart';
 import './speed_code/speed_code.dart';
 import './demo/shape_demo.dart';
+import './demo/source/source_page.dart';
 import 'dart:io';
 
 class HomePage extends StatelessWidget {
@@ -38,6 +39,7 @@ class HomePage extends StatelessWidget {
       ..add(ListItem(title: 'Form', page: FormDemo()))
       ..add(ListItem(title: 'Sunflower', page: SunflowerDemo()))
       ..add(ListItem(title: 'Physics', page: PhysicsDemo()))
+      ..add(ListItem(title: 'Source', page: SourcePage()))
       ..add(ListItem(title: 'Device info', page: DeviceInfoDemo()))
       ..add(ListItem(title: 'State management', page: StateManagementDemo()))
       ..add(ListItem(title: 'Async', page: AsyncDemo()))
