@@ -5,6 +5,7 @@ import './demo/cupertino/cupertino_demo.dart';
 import './demo/widget/material_components.dart';
 import './demo/demo.dart';
 import './demo/navigator_demo.dart';
+import './demo/draw/draw_demo.dart';
 import './demo/animate/animate_demo.dart';
 import './demo/form_demo.dart';
 import './demo/sunflower_demo.dart';
@@ -36,6 +37,7 @@ class HomePage extends StatelessWidget {
       ..add(ListItem(title: 'Navigator', page: NavigatorDemo()))
       ..add(ListItem(title: 'Animate', page: AnimateDemo()))
       ..add(ListItem(title: 'Navigator', page: NavigatorDemo()))
+      ..add(ListItem(title: 'Draw', page: DrawDemo()))
       ..add(ListItem(title: 'Form', page: FormDemo()))
       ..add(ListItem(title: 'Sunflower', page: SunflowerDemo()))
       ..add(ListItem(title: 'Physics', page: PhysicsDemo()))
