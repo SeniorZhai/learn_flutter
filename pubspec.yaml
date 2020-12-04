@@ -40,6 +40,7 @@ dependencies:
   bloc: ^6.0.0
   flutter_bloc: ^6.0.0
   rive: ^0.6.2
+  flutter_svg: ^0.19.2+1
   
 dev_dependencies:
   flutter_test:
@@ -60,7 +61,8 @@ flutter:
      - assets/login/
      - assets/story/
      - assets/rive/off_road_car.riv
-
+     - assets/plant/icons/
+     - assets/plant/images/
   fonts:
     - family: LoginIcons
       fonts:
