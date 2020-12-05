@@ -12,8 +12,9 @@ class _AlertDialogDemoState extends State<AlertDialogDemo> {
   String _choice = 'noting';
   Future<void> _openAlertDialog() async {
     final action = await showDialog(
+        // 弹出Dialog
         context: context,
-        barrierDismissible: false,
+        barrierDismissible: false, // 是否允许点击遮罩关闭
         builder: (BuildContext context) {
           return AlertDialog(
             title: Text('Alert dialog'),

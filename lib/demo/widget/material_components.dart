@@ -19,6 +19,7 @@ import './snack_bar_demo.dart';
 import './stepper_demo.dart';
 import './opacity_demo.dart';
 import './paginated_data_table_demo.dart';
+import './dialog.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -69,6 +70,10 @@ class MaterialComponents extends StatelessWidget {
           ListItem(
             title: 'SimpleDialog',
             page: SimpleDialogDemo(),
+          ),
+          ListItem(
+            title: 'Dialog',
+            page: DialogDemo(),
           ),
           ListItem(
             title: 'Opacity',
