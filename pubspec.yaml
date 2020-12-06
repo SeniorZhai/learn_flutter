@@ -63,6 +63,8 @@ flutter:
      - assets/rive/off_road_car.riv
      - assets/plant/icons/
      - assets/plant/images/
+     - assets/shop/icons/
+     - assets/shop/images/
   fonts:
     - family: LoginIcons
       fonts:
