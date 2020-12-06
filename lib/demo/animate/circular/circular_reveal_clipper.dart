@@ -40,7 +40,7 @@ class CircularRevealClipper extends CustomClipper<Path> {
   }
 
   @override
-  bool shouldReclip(CustomClipper<Path> oldClipper) => true;
+  bool shouldReclip(CustomClipper<Path> oldClipper) => true;// 是否重进裁剪，如果裁剪区域不变应该返回false
 
   static double calcMaxRadius(Size size, Offset center) {
     final w = max(center.dx, size.width - center.dx);
